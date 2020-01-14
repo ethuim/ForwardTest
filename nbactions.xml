@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>run</actionName>
+            <packagings>
+                <packaging>war</packaging>
+            </packagings>
+            <goals>
+                <goal>install</goal>
+                <goal>wildfly:undeploy</goal>
+                <goal>wildfly:deploy-only</goal>
+            </goals>
+        </action>
+    </actions>
