@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>Forward Test</title>
     </h:head>
@@ -8,7 +9,14 @@
         <h1>Hello World!</h1>
         
         <a href="Admin/management">Admins Only</a><br/>
-        <a href="Admin/adminLogin">Admins Login</a><br/>
+        
+        
+        <p>Logged-in as #{request.userPrincipal.name}</p>
+        <h:form>
+
+            <p:commandButton value="Logout" action="#{logoutBacking.submit}"/>
+
+        </h:form>
     </h:body>
 </html>
 
